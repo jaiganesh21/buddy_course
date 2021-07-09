@@ -1,0 +1,266 @@
+ {% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+
+
+    <title>
+     C++ for Beginners
+    </title>
+  </head>
+  <body style="background-color:#98AFC7;">
+
+
+   <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <img src="{% static 'assets/logo.png' %}" style="width: 150px;">
+  <!-- <a class="navbar-brand" href="#" style="font-size: 27px;">BUDDY</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+       <li class="nav-item " style="margin-left: 550px;">
+        <a class="nav-link" href="/mainpage/">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/course/">Courses <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/logout/">logout</a>
+      </li>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<br>
+
+<img src="{% static 'assets/user.png' %}" width="100px;" style="margin-left :1200px; margin-top: -10px;">
+<h4 style="margin-left :1200px; text-align: center; color: brown;">
+    {{ data_cpp.username }}
+  </h4>
+<div style="margin-top: -70px;">
+
+  <u><h1 style="color: brown; margin-left: 5px;">
+    C++ Introduction
+  </h1></u>
+
+  <br>
+
+  
+<h3 style="color: black; margin-left: 20px;"><b>
+  What is C++?
+  </h3></b><br>
+
+
+  <h5 style=" margin-left: 45px; float: center;">
+    C++ is a cross-platform language that can be used to create high-performance applications.
+    <br><br>
+
+      C++ was developed by Bjarne Stroustrup, as an extension to the C language.
+<br><br>
+C++ gives programmers a high level of control over system resources and memory.
+
+<br><br>
+The language was updated 3 major times in 2011, 2014, and 2017 to C++11, C++14, and C++17.
+
+<br><br>
+</h5>
+
+
+
+
+<h3 style="color: black; margin-left: 20px;"><b>
+  Why Use C++
+  </h3></b><br>
+
+<h5 style=" margin-left: 45px; float: center;">
+
+C++ is one of the world's most popular programming languages.
+<br><br>
+
+C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.
+
+<br><br>
+C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.
+
+<br><br>
+C++ is portable and can be used to develop applications that can be adapted to multiple platforms.
+
+<br><br>
+C++ is fun and easy to learn!
+
+<br><br>
+As C++ is close to C# and Java, it makes it easy for programmers to switch to C++ or vice versa
+
+</h5>
+  
+
+
+   
+    <h3 style="color: black; margin-left: 20px;"><b>
+    C++ Get Started
+  </h3></b><br><br>
+
+
+  <h5 style=" margin-left: 45px; float: center;">
+  
+To start using C++, you need two things:
+<br><br>
+
+A text editor, like Notepad, to write C++ code
+<br><br>
+
+A compiler, like GCC, to translate the C++ code into a language that the computer will understand
+<br><br>
+
+There are many text editors and compilers to choose from. In this tutorial, we will use an IDE (see below).
+<br><br>
+
+</h5>
+
+
+ <h3 style="color: black; margin-left: 20px;"><b>
+    C++ Install IDE  
+  </h3></b><br>
+
+
+<h5 style=" margin-left: 45px; float: center;">
+
+
+An IDE (Integrated Development Environment) is used to edit AND compile the code.
+
+<br><br>
+Popular IDE's include Code::Blocks, Eclipse, and Visual Studio. These are all free, and they can be used to both edit and debug C++ code.
+<br><br>
+<b>Note:</b> Web-based IDE's can work as well, but functionality is limited.
+<br><br>
+We will use Code::Blocks in our tutorial, which we believe is a good place to start.
+<br><br>
+You can find the latest version of Codeblocks at http://www.codeblocks.org/downloads/26. Download the mingw-setup.exe file, which will install the text editor with a compiler.
+<br><br>
+
+</h5>
+
+ <h3 style="color: black; margin-left: 20px;"><b>
+  C++ Quickstart
+  </h3></b><br>
+
+<h5 style=" margin-left: 45px; float: center;">
+
+Let's create our first C++ file.<br>Open Codeblocks and go to
+<b> File > New > Empty File.</b>
+Write the following C++ code and save the file as first.cpp <b>(File > Save File as)</b>
+
+<br><br>
+<pre style="color: black; margin-left: 10px; float: center;"><b>
+  #include iostream
+  using namespace std;
+
+  int main()  
+  {
+    cout << "Hello Buddy";
+    return 0;
+  }
+</pre></b>
+
+</h5>
+<br>
+<hr>
+<br>
+<br>
+
+
+ <iframe width="1000" height="520" style="margin-left: 130px;" src="https://www.youtube.com/embed//watch?v=IjPsHIFeqa0&list=RDCMUCKXx22vOENUyHrVAADq7Z_g&start_radio=1&rv=IjPsHIFeqa0&t=3205">
+    </iframe>
+
+<br>
+<br>
+
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/jaiganesh21" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://github.com/jaiganesh21">Github.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

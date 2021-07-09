@@ -1,0 +1,94 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Sign-Up
+	</title>
+	
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-image: url('{% static 'assets/sp.png' %}');">
+
+
+	<img src="{% static 'assets/logo1.png' %}" style="width: 150px;">
+
+	<u style="color: #3F000F">
+			<h1 style="margin-left: 570px; font-size: 40px; margin-top: 30px;  font-family: shrikhand;">
+				Sign-Up
+			</h1>
+		</u>
+
+	<form method="POST" action="{% url 'signup1' %}">
+
+		 {% csrf_token %}
+
+		<div style="margin-top: 80px; margin-left: 40px;">
+
+			<label for="NAME" style="margin-left: 480px; font-size: 23px; font-family:'Times New Roman';">
+				Name :
+			</label>
+			<input type="text" id="NAME" name="NAME" style="margin-left: 40px; font-size: 15px; " placeholder="Enter Your Name" required><br><br><br>
+
+			<label for="uname" style="margin-left: 430px; font-size: 20px; font-family:'Times New Roman';">
+				USERNAME :
+			</label>
+			<input type="text" id="uname" name="uname" style="margin-left: 40px; font-size: 15px; " placeholder="Enter Your username" required><br><br><br>
+
+			<label for="passwords" style="margin-left: 450px; font-size: 23px; font-family:'Times New Roman';">
+				Password :
+			</label>
+			<input type="Password"id="passwords" name="passwords" onkeyup="password()" style="margin-left: 40px; font-size: 15px; " placeholder="Enter Your Password" required><br><br><br>
+
+			<label for="cpassword" style="margin-left: 360px; font-size: 23px; font-family:'Times New Roman';">
+				Confirm Password :
+			</label>
+			<input type="Password" id="cpassword" onkeyup="password()" name="cpassword" style="margin-left: 40px; font-size: 15px; " placeholder="Enter Your Confirm Password" required><br><br><br><br><br><br>
+
+			
+
+			<input onclick="sign_up()" disabled type="submit" id="re" name="re" value="Register" class="btn btn-primary" style="margin-left: 430px; margin-top: -80px;"><br>
+
+			<input onclick="homepage()" type="button" name="home" value="Home Page" id="home" class="btn btn-danger" style="margin-left: 700px; margin-top: -130px;">
+		</div>
+	</form>
+
+	<script>
+				function sign_up()
+				{
+				alert ("successfully completed..😃");
+				}
+		</script>
+
+		<script>
+				function homepage()
+				{
+				window.location.href = "{% url 'login' %}";
+				}
+		</script>
+
+		<script>
+			function password()
+		{
+		var a= document.getElementById('passwords').value;
+		var b= document.getElementById('cpassword').value;
+		var c= document.getElementById('re');
+		if(a==b)
+		{
+			c.disabled = false;
+		}
+		else
+			c.disabled = true;
+		}
+		</script>
+</body>
+</html>

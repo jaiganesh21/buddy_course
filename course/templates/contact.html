@@ -1,0 +1,216 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+
+<style type="text/css">
+  
+#contatti{
+  background-color: #191970;
+  letter-spacing: 1px;
+  }
+#contatti a{
+  color: #fff;
+  text-decoration: none;
+}
+
+#author a{
+  color: #fff;
+  text-decoration: none;
+    
+}
+
+
+</style>
+  <title>
+    Contact
+  </title>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <img src="{% static 'assets/logo.png' %}" style="width: 150px;">
+  <!-- <a class="navbar-brand" href="#" style="font-size: 27px;">BUDDY</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+       <li class="nav-item " style="margin-left: 550px;">
+        <a class="nav-link" href="/mainpage/">Home</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/course/">Courses</a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="/contact/">Contact <span class="sr-only">(current)</span> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout/">logout</a>
+      </li>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="row" id="contatti" style="margin-right: 0px;">
+<div class="container mt-5" >
+
+    <div class="row" style="height:550px;  margin-left: -100px;">
+     <img src="{% static 'assets/buddy.png' %}" style="width: 500px; height: 500px;">
+      <div class="col-md-6" style="margin-left: 60px; margin-top: -35px;">
+        <h2 class="text-uppercase mt-3 font-weight-bold text-white">CONTACT</h2>
+        <form action="">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control mt-2" placeholder="First Name" required>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control mt-2" placeholder="Last Name" required>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input type="email" class="form-control mt-2" placeholder="Email" required>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input type="number" class="form-control mt-2" placeholder="Telephone" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3" required></textarea>
+              </div>
+            </div>
+            <div class="col-12">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2" style="color: white;">
+                  Accept The Condition
+                </label>
+              </div>
+            </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+        <div class="text-white" style="margin-top: -10px;">
+        <h2 class="text-uppercase mt-4 font-weight-bold">Buddy Developer</h2>
+
+        <i class="fas fa-phone mt-3"></i> <a href="tel:+">9566348818</a><br>
+        <i class="fas fa-phone mt-3"></i> <a href="tel:+">6381030924</a><br>
+        <i class="fa fa-envelope mt-3"></i> <a href=""> helpdesk.buddydeveloper@gmail.com</a><br>
+        <i class="fas fa-globe mt-3"></i><a href="https://www.createwithbuddy.tech/home">  www.createwithbuddy.tech</a> <br>
+        <!-- <i class="fas fa-globe mt-3"></i> Piazza del Colosseo, 1, 00184 Roma<br> -->
+        <!-- <div class="my-4">
+        <a href=""><i class="fab fa-facebook fa-3x pr-4"></i></a>
+        <a href=""><i class="fab fa-linkedin fa-3x"></i></a>
+        </div> -->
+        </div>
+      </div>
+
+    </div>
+</div>
+</div>
+
+<!-- <div class="row text-center bg-success text-white" id="author">
+  <div class="col-12 mt-4 h3 ">
+  <a href="#">by P. Fattoruso</a>
+</div>
+<div class="col-12 my-2">
+<a href="https://www.linkedin.com/in/paolofattoruso/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+</div>
+</div> -->
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/jaiganesh21" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://github.com/jaiganesh21">Github.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+</body>
+</html>

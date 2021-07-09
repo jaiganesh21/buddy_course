@@ -1,0 +1,107 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Login_Page
+	</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+      .multicolortext {
+        background-image: linear-gradient(to left, #FF00FF,#A74AC7);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+
+</head>
+	<body style="background-image: url('{% static 'assets/a.png' %}');">
+
+		<div style="float: center">	
+			
+
+			<img src="{% static 'assets/logo1.png' %}" style="width: 150px;">
+
+
+				<u style="color: #E238EC"><h1 style="font-size: 40px; margin-left: 520px; margin-top: -19px; font-weight: bolder; font-family: BonaNova; ">
+					<span class="multicolortext">BUDDY COURSES</span>
+				</h1></u>
+					
+				<u><h1 style="font-size: 35px; margin-left: 625px; margin-top: 53px; font-family: shrikhand; ">
+					LOGIN
+				</h1></u><br>
+<!-- 	<img src="center.png"; style="margin-top: -30px" > -->
+			</div>
+				<form method="POST" action=" /CHECK/ ">
+
+					 {% csrf_token %}
+
+					<div style="margin-top: 10px;">
+					<label for="username" style="margin-left:  500px; font-size: 25px; color: black;  font-family:  '';">
+						Username :
+					</label>
+						<input type="text" name="username" id="username"  style="margin-left: 40px; font-size: 15px; margin-top: 40px;" placeholder="Enter Your Username" required><br>
+
+							<label for="password" style="margin-left:  500px; font-size: 25px; color: black;  font-family: '';">
+								Password :
+							</label>
+								<input onchange="visible()" type="password" name="password" id="password"  style="margin-left: 40px; font-size: 15px; margin-top: 40px;" placeholder="Enter Your password" required><br>
+									<label for="vs" style="margin-left:  690px;	margin-top: -10px; color: black;">
+										Show Password
+									</label>	
+										<input type="checkbox" onchange="visible()" name="vs" id="vs" style="margin-left: -130px; margin-top: 10px;"><br>
+										
+										  	<input onclick="register()" type="button" name="c" value="sign up" id="c" class="btn btn-danger" style="margin-right: 500px;
+										  		margin-left: 530px; margin-top: 50px; margin-bottom: 50px; width: 100px; height: 25px;">
+								  		
+				 									<input type="submit" name="lb" value="login" class="btn btn-success" style="margin-right: 10px; margin-left: -390px; width: 100px; height: 25px;"><br>
+
+															{% if messages %}
+				 											<label  id="mess" style=" margin-left: 635px; margin-top: -100px; width: 130px; height: 25px; color: orange; ">
+				 											{% for message in messages %}
+															{{ message }}
+															{%  endfor %}
+															</label>
+															{% endif %}
+				 																			
+																<footer  style="margin-top: 80px; margin-left: 620px; color: yellow; font-family:Algerian; ">
+																	A WEBSITE BY JAI....😁
+																</footer>				 										
+
+			<script>
+				function register()
+				{
+				window.location.href = "/signup/";
+				}
+			</script>
+
+						
+			<script>
+				function visible() {
+				  var x = document.getElementById("password");
+				  var y = document.getElementById("vs");
+					if (y.checked == true)
+						x.type = "text";
+					else
+						x.type = "password";
+				}
+			</script>
+				</div>		 								
+			</form>
+	</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,318 @@
+ {% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+
+
+    <title>
+     C for Beginners
+    </title>
+  </head>
+  <body style="background-color:#98AFC7;">
+
+
+   <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <img src="{% static 'assets/logo.png' %}" style="width: 150px;">
+  <!-- <a class="navbar-brand" href="#" style="font-size: 27px;">BUDDY</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+       <li class="nav-item " style="margin-left: 550px;">
+        <a class="nav-link" href="/mainpage/">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/course/">Courses <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/logout/">logout</a>
+      </li>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<br>
+
+<img src="{% static 'assets/user.png' %}" width="100px;" style="margin-left :1200px; margin-top: -10px;">
+<h4 style="margin-left :1200px; text-align: center; color: brown;">
+    {{ data_c.username }}
+  </h4>
+<div style="margin-top: -70px;">
+
+  <u><h1 style="color: brown; margin-left: 5px;">
+    C Language Introduction
+  </h1></u>
+
+  <br>
+
+  
+
+
+  <h5 style=" margin-left: 45px; float: center;">
+    C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system. The main features of the C language include low-level memory access, a simple set of keywords, and a clean style, these features make C language suitable for system programmings like an operating system or compiler development. 
+Many later languages have borrowed syntax/features directly or indirectly from the C language. Like syntax of Java, PHP, JavaScript, and many other languages are mainly based on the C language. C++ is nearly a superset of C language (Few programs may compile in C, but not in C++).
+    <br><br>
+  </h5>
+  
+    <h3 style="color: black; margin-left: 10px;"><b>
+    Beginning with C programming: 
+  </h3></b><br><br>
+
+  <h3 style="color: black; margin-left: 10px;"><b>
+    1. Structure of a C program  
+  </h3></b><br>
+
+<h5 style=" margin-left: 45px; float: center;">
+
+After the above discussion, we can formally assess the structure of a C program. By structure, it is meant that any program can be written in this structure only. Writing a C program in any other structure will hence lead to a Compilation Error.
+The structure of a C program is as follows:
+
+<br><br>
+</h5>
+
+ <h3 style="color: black; margin-left: 10px;"><b>
+    1. The components of the above structure are:  
+  </h3></b><br>
+
+
+ <h4 style="color: black; margin-left: 10px;"><b>
+    1. Header Files Inclusion: 
+  </h4></b><br>
+
+  <h5 style=" margin-left: 45px; float: center;">
+
+The first and foremost component is the inclusion of the Header files in a C program. 
+
+
+
+<br><br>
+A header file is a file with extension .h which contains C function declarations and macro definitions to be shared between several source files.
+<br><br>
+Some of C Header files:
+<br><br>
+stddef.h – Defines several useful types and macros.
+<br><br>
+stdint.h – Defines exact width integer types.
+<br><br>
+stdio.h – Defines core input and output functions
+<br><br>
+stdlib.h – Defines numeric conversion functions, pseudo-random network generator, memory allocation
+<br><br>
+string.h – Defines string handling functions
+<br><br>
+math.h – Defines common mathematical functions
+<br><br>
+
+<h4 style="color: black; margin-left: 10px;"><b>
+    2. Main Method Declaration: 
+  </h4></b><br>
+
+<h5 style=" margin-left: 45px; float: center;">
+
+The next part of a C program is to declare the main() function. The syntax to declare the main function is:<br>
+<b>Syntax to Declare the main method: </b>
+</h5>
+<br><br>
+<pre style="color: black; margin-left: 10px;"><b>
+  int main()
+{}
+</pre></b>
+
+</h5>
+
+
+<h3 style="color: black; margin-left: 20px;"><b>
+    2. Variable Declaration: 
+  </h3></b><br>
+</div>
+
+<h5 style=" margin-left: 45px; float: center;">
+  he next part of any C program is the variable declaration. It refers to the variables that are to be used in the function. Please note that in the C program, no variable can be used without being declared. Also in a C program, the variables are to be declared before any operation in the function.<br><br>
+
+  <u><b>Example: </b></u>
+
+<pre style="color: black; margin-left: 55px;"><b>
+ int main()
+{
+    int a;
+    .
+    .
+}
+</pre></b>
+<br>
+</h5>
+
+
+<h3 style="color: black; margin-left: 20px;"><b>
+    3. Body: 
+  </h3></b><br>
+</div>
+
+<h5 style=" margin-left: 45px; float: center;">
+  The body of a function in the C program, refers to the operations that are performed in the functions. It can be anything like manipulations, searching, sorting, printing, etc.<br><br>
+
+  <u><b>Example: </b></u>
+
+<pre style="color: black; margin-left: 55px;"><b>
+ int main()
+{
+    int a;
+
+    printf("%d", a);
+    .
+    .
+}
+</pre></b>
+
+</h5>
+
+
+<h3 style="color: black; margin-left: 20px;"><b>
+    4. Return Statement: 
+  </h3></b><br>
+</div>
+
+
+<h5 style=" margin-left: 45px; float: center;">
+  The last part of any C program is the return statement. The return statement refers to the returning of the values from a function. This return statement and return value depend upon the return type of the function. For example, if the return type is void, then there will be no return statement. In any other case, there will be a return statement and the return value will be of the type of the specified return type.<br><br>
+
+<u><b>Example: </b></u>
+ 
+
+<pre style="color: black; margin-left: 55px;"><b>
+ int main()
+{
+    int a;
+
+    printf("%d", a);
+
+    return 0;
+}
+</pre></b>
+
+</h5>
+
+
+
+
+<h3 style="color: black; margin-left: 20px;"><b>
+    Writing first program: 
+  </h3></b><br>
+</div>
+<br>
+
+<h4 style="color: black; margin-left: 45px; float: center;"><b>
+    Following is first program in C
+  </h4></b><br>
+
+<h5>
+<pre style="color: black; margin-left: 55px;"><b>
+  #include stdio.h
+  int main(void)
+ {
+    printf("Hello Buddy");
+    return 0;
+ }
+</pre></b>
+</h5>
+<br><br>
+<hr>
+<br>
+<br>
+
+
+
+ <iframe width="1000" height="520" style="margin-left: 130px;" src="https://www.youtube.com/embed/watch?v=wKoGImLA2KA&list=PLsyeobzWxl7oBxHp43xQTFrw9f1CDPR6C">
+    </iframe>
+
+<br>
+<br>
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/jaiganesh21" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://github.com/jaiganesh21">Github.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+ {% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+
+    <title>
+    	Courses
+    </title>
+  </head>
+  <body style="background-color: #C0C0C0;">
+
+
+   <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <img src="{% static 'assets/logo.png' %}" style="width: 150px;">
+  <!-- <a class="navbar-brand" href="#" style="font-size: 27px;">BUDDY</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item " style="margin-left: 550px;">
+        <a class="nav-link" href="/mainpage/">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/course/">Courses <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/logout/">logout</a>
+      </li>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<br>
+
+<br>
+<u style="color: black"><h1 style="font-family: 'shrikhand'; margin-left: 550px; color: black;">
+	Courses
+</h1></u>
+<!--Description-->
+<br>
+<br>
+   <img src="{% static 'assets/user.png' %}" width="100px;" style="margin-left :1200px; margin-top: -200px;">
+<h4 style="margin-left :1190px; margin-top: -50px; text-align: center; color: brown;">
+   {{ data_course.username }}
+  </h4><br>
+  <br>
+<br>
+
+<div class="card" style="width: 18rem; margin-left: 100px; margin-bottom: 10px;">
+  <img class="card-img-top" src="{% static 'assets/py.png' %}" alt="Card image cap">
+  <div class="card-body">
+    <a href="" class="card-title" style="font-size: 25px; color: red;">Python For Beginners<br></a>
+    <br><p class="card-text">The course will train with the core programming concepts with Python. You will become eligible to apply for positions at Google, Microsoft, Facebook and more. The course is available English language.</p>
+    <a href="/python/" id="py" class="btn btn-primary" onclick="python()">Enroll Free</a>
+    
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem; margin-left: 500px; margin-top: -499px;">
+  <img class="card-img-top" src="{% static 'assets/java.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <a href="" class="card-title" style="font-size: 25px; color: red;">Java For Beginners<br></a>
+   <br><p class="card-text">Online Core Java Tutorial for beginners to learn the basic concepts of Core Java. Here you will learn the fundamentals of Core Java (Class, Interface etc.). These sections also contain what you have learned in a given topic.</p>
+    <a href="/java/" id="ja" class="btn btn-primary" onclick="java()">Enroll Free</a>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem; margin-left: 900px; margin-top: -488px;">
+  <img class="card-img-top" src="{% static 'assets/django.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <a href="" class="card-title" style="font-size: 25px; color: red;">Django For Beginners<br></a>
+   <br><p class="card-text">Django is a web development framework for Python which offers standard methods for fast and effective website development. The primary goal of this high-level web framework is to create complex database-driven websites</p>
+    <a href="/django/" id="dj" class="btn btn-primary" onclick="django()">Enroll Free</a>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem; margin-left: 100px; margin-top: 80px;">
+  <img class="card-img-top" src="{% static 'assets/cp.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <a href="" class="card-title" style="font-size: 25px; color: red;">C For Beginners<br></a>
+    <br><p class="card-text">C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. C programming is an excellent language to learn to program for beginners</p>
+    <a href="/c/" id="c" class="btn btn-primary" onclick="c()">Enroll Free</a>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem; margin-left: 500px; margin-top: -510px;">
+  <img class="card-img-top" src="{% static 'assets/c++.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <a href="" class="card-title" style="font-size: 25px; color: red;">C++ For Beginners<br></a>
+   <br><p class="card-text">Learn one of the most powerful and portable programming languages C++ and become eligible to apply for the positions at Google, Microsoft, Facebook, Amazon etc.</p>
+    <a href="/cpp/" id="c+" class="btn btn-primary" onclick="cpp()">Enroll Free</a>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem; margin-left: 900px; margin-top: -440px;">
+  <img class="card-img-top" src="{% static 'assets/net.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <a href="" class="card-title" style="font-size: 25px; color: red;">Networking For Beginners<br></a>
+   <br><p class="card-text">Computer Network tutorial provides basic and advanced concepts of Data Communication & Networks (DCN). Our Computer Networking Tutorial is designed for beginners and professionals.</p>
+      
+      <a href="/network/" id="net" class="btn btn-primary" onclick="net()">Enroll Free</a>
+    </div>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+</div>
+<br>
+
+<div class="alert alert-danger" role="alert" style="margin-right: 530px; margin-left: 500px;">
+  <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </svg>
+  <div style="margin-top: -22px; margin-left: 30px;"> More Courses Will Update Soon...!
+  |</div>
+  </div>
+<br>
+<br>
+
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/jaiganesh21" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://github.com/jaiganesh21">Github.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+        function net()
+        {
+        // alert ("You Have Successfully Register the Networking Course...!");
+        swal("Congrats!", " You Have Successfully Register the Networking Course...!", "success");
+        }
+    </script>
+
+
+<script>
+        function c()
+        {
+        // alert ("You Have Successfully Register the Networking Course...!");
+        swal("Congrats!", " You Have Successfully Register the C for beginners Course...!", "success");
+        }
+    </script>
+
+
+    <script>
+        function cpp()
+        {
+        // alert ("You Have Successfully Register the Networking Course...!");
+        swal("Congrats!", " You Have Successfully Register the C++ for beginners Course...!", "success");
+        }
+    </script>
+
+
+    <script>
+        function java()
+        {
+        // alert ("You Have Successfully Register the Networking Course...!");
+        swal("Congrats!", " You Have Successfully Register the Java for beginners Course...!", "success");
+        }
+    </script>
+
+
+
+    <script>
+        function python()
+        {
+        // alert ("You Have Successfully Register the Networking Course...!");
+        swal("Congrats!", " You Have Successfully Register the Python for beginners Course...!", "success");
+        }
+    </script>
+
+
+<script>
+        function django()
+        {
+        // alert ("You Have Successfully Register the Networking Course...!");
+        swal("Congrats!", " You Have Successfully Register the Django for beginners Course...!", "success");
+        }
+    </script>
+
+
+    
+  </body>
+</html>
